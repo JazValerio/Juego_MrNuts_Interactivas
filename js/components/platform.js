@@ -61,6 +61,8 @@ export class Platform {
           });
           this.levelData.energyBalls.forEach((item)=>{
             let energyBall = this.scene.add.sprite(item.x, item.y, 'energyBall').setOrigin(0,0);
+            energyBall.setScale(0.8);
+
            
             //enable physics
             this.scene.add.existing(energyBall, true);
@@ -77,6 +79,11 @@ export class Platform {
     get(){
         return this.platforms;
     }
+
+    getEnergyBalls(){
+        return this.energyBalls;
+    }
+
 
 /*
     static WIDTH = 1200;

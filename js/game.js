@@ -1,6 +1,7 @@
 import { Platform } from './components/platform.js';
 import { Player } from './components/player.js';
 import{loader} from './loader.js';
+import { Enemy } from './components/enemy.js';
 export class Game extends Phaser.Scene{
 
     constructor(){
@@ -10,6 +11,7 @@ export class Game extends Phaser.Scene{
     init(){
        
        this.player= new Player(this);
+       
     }
 
     preload(){
@@ -20,10 +22,11 @@ export class Game extends Phaser.Scene{
     create(){
         const levelData= this.cache.json.get('levelData');
         this.plataform= new Platform(this,levelData); 
+        this.enemy= new Enemy(this,levelData);
         this.add.image(0,0,'background').setOrigin(0,0).setScale(1);
         this.plataform.create();
         this.player.create();
-
+        this.enemy.create();
         this.create_colliders();
     }
 
@@ -39,6 +42,10 @@ export class Game extends Phaser.Scene{
             if(player.body.velocity.y <0) return false;
             return true;
         });
+
+        this.physics.add.overlap(this.player.get(), this.plataform.getEnergyBalls,(player, energyBall) => {
+            
+        },null);
     } 
 
     player_on_platform(playerR, platform){

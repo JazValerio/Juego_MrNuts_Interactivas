@@ -10,7 +10,8 @@ export class Player{
     create(){
         this.player = this.Scene.physics.add.sprite(22 ,400, 'MrNuts');
         this.player.setOrigin(0,0);
-        this.player.setData('velx',300); 
+        this.player.setScale(0.7);
+        this.player.setData('velx',240); 
         this.player.setData('veljump',640);
         this.player.setAngle(0);
         this.player.setBounce(0.2);
