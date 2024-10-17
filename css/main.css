@@ -96,12 +96,20 @@ h1 {
   border-bottom: 0.35rem solid rgb(139, 92, 29);
 }
 
+.title-login {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
   font-weight: 400;
   padding: 1rem 1.5rem;
   border-radius: 2rem;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -121,6 +129,14 @@ h1 {
   margin-left: 1rem;
   background: rgb(81, 53, 10);
   color: #fff;
+}
+
+.btn-login {
+  font-family: "ADLaM Display", ssystem-ui;
+  background: #fff;
+  color: rgb(24, 23, 39);
+  padding: 1rem 1.5rem;
+  font-size: 16px;
 }
 
 .card {
@@ -217,6 +233,51 @@ h1 {
   justify-content: center;
 }
 
+.black-box {
+  background-color: rgba(25, 26, 28, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  color: #fff;
+}
+
+.ranking-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ranking-item {
+  background-color: #4c4c4c;
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+}
+
+.input {
+  font-family: "ADLaM Display", ssystem-ui;
+  width: 80%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #4c4c4c;
+  color: #fff;
+  font-size: 1rem;
+}
+
 .footer-section {
   background: rgb(41, 42, 45);
   border-bottom: 1rem solid rgb(81, 53, 10);
@@ -260,6 +321,16 @@ h1 {
 .art-section {
   padding-top: 4rem;
   padding-bottom: 2rem;
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-image: url("../img/fondoJuego.png");
+  background-size: cover;
+  background-position: center;
 }
 
 * {

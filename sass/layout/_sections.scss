@@ -23,3 +23,13 @@
     padding-top: 4rem;
     padding-bottom: 2rem;
 }
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: url('../img/fondoJuego.png');
+    background-size: cover;
+    background-position: center;
+  }

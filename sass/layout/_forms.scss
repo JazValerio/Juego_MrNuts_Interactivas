@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.input-group {
+    margin-bottom: 1.5rem;
+
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: $fs-S;
+
+}
+
+.input {
+
+    font-family: $ff-main;
+    width: 80%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #4c4c4c;
+    color: #fff;
+    font-size: 1rem;
+}

@@ -6,6 +6,7 @@
     font-weight: $fw-regular;
     padding: 1rem 1.5rem;
     border-radius: 2rem;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -25,4 +26,12 @@
     margin-left: 1rem;
     background: $clr-coffe;
     color: $clr-white;
+}
+
+.btn-login{
+    font-family: $ff-main;
+    background: $clr-white;
+    color: $clr-darkblue;
+    padding: 1rem 1.5rem;
+    font-size: $fs-S;
 }
