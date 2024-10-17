@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as *;
+
+h1{
+    font-family: $ff-main;
+}
+
+.text-white{
+    color: $clr-white;
+}
+
+.text-dark{
+    color: $clr-black;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.Bigtitle{
+    padding-top: 4rem;
+    font-size: $fs-TITLE;
+    color: $clr-darkblue;
+}
+.subtitle{
+    font-size: $fs-L;
+    color: $clr-darkblue;
+    padding-bottom: 3rem;
+}
+.title-description{
+    padding: 1rem;
+    font-size: $fs-S;
+    color: $clr-whitebrown;
+}
+.title{
+    font-size: $fs-XL;
+    color: $clr-darkblue;
+    border-bottom: .35rem solid $clr-whitebrown;
+}
+
+.cards-title{
+    padding: 0rem 1rem;
+    font-size: $fs-M;
+    color: $clr-darkblue;
+    border-bottom: .05rem;
+}
+
+.cards-subtitle{
+    font-size: $fs-L;
+    color: $clr-darkblue;
+    margin-bottom: 1rem;
+    border-bottom: .35rem solid $clr-whitebrown;
+}
+

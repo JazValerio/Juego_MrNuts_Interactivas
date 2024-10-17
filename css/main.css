@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ADLaM Display", ssystem-ui;
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p, li, caption {
+  text-wrap: pretty;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.w10 {
+  width: 10%;
+}
+
+.w20 {
+  width: 20%;
+}
+
+.w70 {
+  width: 70%;
+}
+
+.auto {
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "ADLaM Display", ssystem-ui;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-dark {
+  color: rgb(30, 30, 30);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.Bigtitle {
+  padding-top: 4rem;
+  font-size: 70px;
+  color: rgb(24, 23, 39);
+}
+
+.subtitle {
+  font-size: 36px;
+  color: rgb(24, 23, 39);
+  padding-bottom: 3rem;
+}
+
+.title-description {
+  padding: 1rem;
+  font-size: 16px;
+  color: rgb(139, 92, 29);
+}
+
+.title {
+  font-size: 52px;
+  color: rgb(24, 23, 39);
+  border-bottom: 0.35rem solid rgb(139, 92, 29);
+}
+
+.cards-title {
+  padding: 0rem 1rem;
+  font-size: 24px;
+  color: rgb(24, 23, 39);
+  border-bottom: 0.05rem;
+}
+
+.cards-subtitle {
+  font-size: 36px;
+  color: rgb(24, 23, 39);
+  margin-bottom: 1rem;
+  border-bottom: 0.35rem solid rgb(139, 92, 29);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.btn:hover {
+  background: rgb(24, 23, 39);
+  color: #fff;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.gray-btn {
+  font-size: 24px;
+  background: rgb(217, 217, 217);
+  color: rgb(30, 30, 30);
+}
+
+.coffe-btn {
+  margin-left: 1rem;
+  background: rgb(81, 53, 10);
+  color: #fff;
+}
+
+.card {
+  position: relative;
+  border: 0.05rem solid rgb(217, 217, 217);
+  border-radius: 3rem;
+  display: grid;
+  max-width: fit-content;
+  padding: 2rem;
+}
+
+.columnscard-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 3rem 7rem;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.header-section {
+  padding: 2rem 8rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.35rem solid rgb(81, 53, 10);
+}
+
+.top-nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  align-items: start;
+}
+
+.nav-list-item {
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: rgb(30, 30, 30);
+}
+
+.nav-list-item:hover {
+  background: rgb(139, 92, 29);
+  color: #fff;
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.5rem;
+}
+
+.title-container {
+  width: 60%;
+  background: rgb(217, 217, 217);
+  margin: 0 auto;
+  border-radius: 1.5rem;
+}
+
+.levels-cards {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+.art-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gear-icons {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letras-container {
+  background: rgb(217, 217, 217);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-section {
+  background: rgb(41, 42, 45);
+  border-bottom: 1rem solid rgb(81, 53, 10);
+  display: flex;
+  padding: 3rem 8.5rem;
+  justify-content: space-between;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  color: rgb(81, 53, 10);
+}
+
+.banner-section {
+  background: url("../img/fondoJuego.png") no-repeat;
+  background-size: cover;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5rem;
+  gap: 7rem;
+}
+
+.levels-section {
+  padding-top: 4rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.art-section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=main.css.map */

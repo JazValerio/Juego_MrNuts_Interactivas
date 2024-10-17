@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+.top-nav{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: start;
+}
+
+.nav-list-item{
+    text-decoration: none;
+    display: flex;
+    gap: .5rem;
+    border-radius: .5rem;
+    padding: .25rem .5rem;
+    color: $clr-black
+}
+
+.nav-list-item:hover{
+    background: $clr-whitebrown;
+    color: $clr-white
+}
+

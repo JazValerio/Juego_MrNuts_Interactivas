@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: $fw-regular;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.btn:hover{
+    background: $clr-darkblue;
+    color: $clr-white;
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+.gray-btn{
+    font-size: $fs-M;
+    background: $clr-gray;
+    color: $clr-black;
+}
+
+.coffe-btn{
+    margin-left: 1rem;
+    background: $clr-coffe;
+    color: $clr-white;
+}

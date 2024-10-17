@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+
+.columns-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.5rem;
+}
+.title-container{
+
+    width: 60%;
+    background: $clr-gray;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+}
+
+.levels-cards{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem ;
+    gap: 3rem;
+}
+
+.art-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gear-icons{
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letras-container{
+    background: $clr-gray;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}

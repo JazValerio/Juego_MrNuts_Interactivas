@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+.card{
+    position: relative;
+    border: .05rem solid $clr-gray;
+    border-radius: 3rem;
+    display: grid;
+    max-width: fit-content;
+    padding: 2rem;
+}
+
+.columnscard-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Fila con 3 columnas
+    gap: 1.5rem;
+    padding: 3rem 7rem;
+
+}
