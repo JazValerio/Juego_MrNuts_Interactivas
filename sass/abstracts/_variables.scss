@@ -4,13 +4,30 @@ $ff-secondary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida S
 $fw-regular: 400;
 $fw-bold: 700;
 
-$fs-S: 16px;
-$fs-M: 24px;
-$fs-L: 36px;
-$fs-XL: 52px; 
-$fs-XXL: 64px; 
+$fs-S: 1rem;
+$fs-M: 1.5rem;
+$fs-L: 2.25rem;
+$fs-XL: 3.25rem; 
+$fs-XXL: 4rem; 
 
-$fs-TITLE: 70px;
+//variables para la cambio de pantalla. 
+@media (max-width: 768px) {
+    $fs-S: 0.875rem;
+    $fs-M: 1.25rem;
+    $fs-L: 1.75rem;
+    $fs-XL: 2.75rem;
+    $fs-XXL: 3.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    $fs-S: 0.75rem;
+    $fs-M: 1rem;
+    $fs-L: 1.5rem;
+    $fs-XL: 2rem;
+    $fs-XXL: 2.5rem;
+  }
+
+$fs-TITLE: 4.375rem;
 
 $clr-white: #fff;
 $clr-gray: rgba(217, 217, 217, 1);

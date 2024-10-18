@@ -10,3 +10,25 @@ $retina: '(min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), 
         @content;
     }
 }
+
+//chatgpt: Ayudame a traves de esta referencia (uso de variables), a poder crear un código que se adapte a los diferentes tamanos de pantalla, especialmente en los tamaños de letras de mono que se adapten a estas segun su tamaño.
+
+html {
+    font-size: 16px; // Este es el valor base para desktop
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px; // Reducir la base para tabletas
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: 12px; // Reducir la base aún más para móviles
+    }
+}
+
+html {
+    font-size: clamp(12px, 1.5vw, 16px); // El tamaño de la fuente se ajustará entre 12px y 16px dependiendo del viewport
+  }

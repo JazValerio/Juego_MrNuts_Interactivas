@@ -5,10 +5,17 @@
 }
 
 .header-section{
-    padding: 2rem 8rem;
+    padding: 1rem 8rem;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: .35rem solid $clr-coffe;
+}
+
+.logo-header{
+    background: url("../../img/logo.png") no-repeat;
+    background-size:contain;
+    width: 7rem;
+    height: 7rem;
 }

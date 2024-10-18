@@ -4,7 +4,7 @@
     background: $clr-blackgray;
     border-bottom: 1rem solid $clr-coffe;
     display: flex;
-    padding: 3rem 8.5rem;
+    padding: 1.5rem 8.5rem;
     justify-content: space-between;
 }
 .footer-icons{
@@ -13,8 +13,6 @@
     justify-content: baseline;
     align-items: center;
 }
-
-
 
 .icon:hover{
     transform: scale(1.1);
