@@ -17,6 +17,11 @@ export class Player{
         this.player.setBounce(0.2);
         this.player.setSize(50,50);
         this.player.setOffset(35,109);
+        //this.Scene.cameras.main.startFollow(this.player);
+        
+        //this.Scene.cameras.main.setZoom(1.5);  
+        //this.Scene.cameras.main.setBounds(0, 0, this.Scene.game.config.width * this.Scene.cameras.main.zoom, this.Scene.game.config.height * this.Scene.cameras.main.zoom);
+
         //this.player.setCollideWorldBounds(true);
 
         this.Scene.anims.create({

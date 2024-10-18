@@ -2,6 +2,7 @@ import { Platform } from './components/platform.js';
 import { Player } from './components/player.js';
 import{loader} from './loader.js';
 import { Enemy } from './components/enemy.js';
+import { Collecters } from './components/collecters.js';
 export class Game extends Phaser.Scene{
 
     constructor(){
@@ -23,10 +24,12 @@ export class Game extends Phaser.Scene{
         const levelData= this.cache.json.get('levelData');
         this.plataform= new Platform(this,levelData); 
         this.enemy= new Enemy(this,levelData);
+        this.collecters= new Collecters(this,levelData);
         this.add.image(0,0,'background').setOrigin(0,0).setScale(1);
         this.plataform.create();
         this.player.create();
         this.enemy.create();
+        this.collecters.create();
         this.create_colliders();
     }
 
