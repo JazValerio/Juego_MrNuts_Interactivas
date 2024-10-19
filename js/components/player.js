@@ -1,24 +1,24 @@
-export class Player{
+export class Player {
 
-    constructor(scene){
-     this.Scene = scene;
+    constructor(scene) {
+        this.Scene = scene;
     }
 
     playerJump = -560;
-    
 
-    create(){
-        this.player = this.Scene.physics.add.sprite(22 ,400, 'MrNuts');
-        this.player.setOrigin(0,0);
+
+    create() {
+        this.player = this.Scene.physics.add.sprite(22, 400, 'MrNuts');
+        this.player.setOrigin(0, 0);
         this.player.setScale(0.7);
-        this.player.setData('velx',240); 
-        this.player.setData('veljump',640);
+        this.player.setData('velx', 240);
+        this.player.setData('veljump', 640);
         this.player.setAngle(0);
         this.player.setBounce(0.2);
-        this.player.setSize(50,50);
-        this.player.setOffset(35,109);
+        this.player.setSize(50, 50);
+        this.player.setOffset(35, 109);
         //this.Scene.cameras.main.startFollow(this.player);
-        
+
         //this.Scene.cameras.main.setZoom(1.5);  
         //this.Scene.cameras.main.setBounds(0, 0, this.Scene.game.config.width * this.Scene.cameras.main.zoom, this.Scene.game.config.height * this.Scene.cameras.main.zoom);
 
@@ -28,18 +28,10 @@ export class Player{
             key: 'right',
             frames: this.Scene.anims.generateFrameNumbers('MrNuts', { start: 0, end: 49 }),
             frameRate: 50,
-             //yoyo: true,
+            //yoyo: true,
             repeat: -1
         });
-        /*this.Scene.anims.create({
-            key: 'jump',
-            frames: this.Scene.anims.generateFrameNumbers('MrNuts', { start: 0, end: 50 }),
-            frameRate: 50,
-            yoyo: true,
-            repeat: -1
-        });*/
-        
-
+       
         this.Scene.anims.create({
             key: 'turn',
             frames: this.Scene.anims.generateFrameNumbers('MrNuts-idle', { start: 0, end: 49 }),
@@ -47,49 +39,56 @@ export class Player{
             repeat: -1
         });
 
+        this.Scene.anims.create({
+            key: 'interact',
+            frames: this.Scene.anims.generateFrameNumbers('MrNuts-interact', { start: 0, end: 68 }),
+            frameRate: 40,
+            repeat: 1
+        });
+
         this.controles = this.Scene.input.keyboard.createCursorKeys();
 
         this.isTouching = false;
         this.Scene.input.on('pointerdown', (pointer) => {//esto es para que se detecte cuando se toca pantalla (celular)
-            this.isTouching=true;
+            this.isTouching = true;
             this.handleTouch(pointer);
-            
+
         });
 
         this.Scene.input.on('pointerup', () => {//esto es para que se detecte cuando no se toca pantalla (celular)
-            this.isTouching=false;
+            this.isTouching = false;
             this.player.setVelocityX(0);
             this.player.anims.play('turn', true);
-            
+
         })
 
         //this.cameras.main.setBounds(0, 0, 1200, 700);
         //this.cameras.main.startFollow(this.player, true, 0.5, 0.5);
-  
+
     }
 
-   
 
-    update(){
+
+    update() {
         this.onGround = this.player.body.onFloor();
 
-        if(this.controles.right.isDown){
+        if (this.controles.right.isDown) {
             this.player.setVelocityX(this.player.getData('velx'));
-            this.player.anims.play('right',true);
+            this.player.anims.play('right', true);
             this.player.flipX = false;
-        }else if(this.controles.left.isDown){
+        } else if (this.controles.left.isDown) {
             this.player.setVelocityX(-this.player.getData('velx'));
-            this.player.anims.play('right',true);
+            this.player.anims.play('right', true);
             this.player.flipX = true;
-        }else if(!this.controles.up.isDown){
+        } else if (!this.controles.up.isDown) {
             this.player.setVelocityX(0);
-            this.player.anims.play('turn',true);
+            this.player.anims.play('turn', true);
         }
 
-        if((this.controles.up.isDown || this.controles.space.isDown) && this.onGround){
+        if ((this.controles.up.isDown || this.controles.space.isDown) && this.onGround) {
             this.player.body.setVelocityY(this.playerJump);
-          }
-        
+        }
+
         /*
         else if (this.Scene.input.pointer1.isDown) {
             this.handleTouch(this.Scene.input.pointer1);
@@ -98,7 +97,7 @@ export class Player{
             this.player.anims.play('turn', true);
         }
        */
-        
+
         this.outOfWorld();
 
     }
@@ -108,21 +107,21 @@ export class Player{
         if (pointer.x > this.player.x) {
             this.player.setVelocityX(this.player.getData('velx'));
             this.player.anims.play('right', true);
-        } 
+        }
         // Si cuando toca está a la izquierda del juagador
         else if (pointer.x < this.player.x) {
             this.player.setVelocityX(-this.player.getData('velx'));
-            this.player.anims.play('right', true); 
+            this.player.anims.play('right', true);
         }
     }
 
-    outOfWorld(){
+    outOfWorld() {
         const worldBounds = this.Scene.physics.world.bounds;
 
         // Verificar si el jugador sale de los límites del mundo
-        if (this.player.x < worldBounds.x || 
-            this.player.x > worldBounds.width || 
-            this.player.y < worldBounds.y || 
+        if (this.player.x < worldBounds.x ||
+            this.player.x > worldBounds.width ||
+            this.player.y < worldBounds.y ||
             this.player.y > worldBounds.height) {
 
             // Reiniciar la escena si el jugador sale del mundo
@@ -131,12 +130,36 @@ export class Player{
             this.Scene.cameras.main.on('camerafadeoutcomplete', function (camera, effect) {
                 //restart game 
                 this.Scene.scene.restart();
-              }, this)
+            }, this)
         }
 
     }
 
-    get(){
+    playerSlowDown() {
+        let velx = this.player.getData('velx');
+        velx -= 100;
+        this.player.setData('velx', velx);
+    }
+
+    playerSpeedBoost() {
+        let velx = this.player.getData('velx');
+        
+        if (velx > 240) {
+            velx += 50;
+        }else{
+            velx += 150; 
+        }
+        
+        this.player.setData('velx', velx);
+
+        //chatgpt: a partir de este metodo (metodo pegado) dayudame a controlar que despues de 10 segundos regrese la velocidad a la original.
+        // Después de 10 segundos (10000 milisegundos), regresar la velocidad a la original
+        this.Scene.time.delayedCall(10000, () => {
+            this.player.setData('velx', 240);
+        });
+    }
+
+    get() {
         return this.player;
     }
 

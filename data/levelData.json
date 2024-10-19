@@ -1,16 +1,29 @@
 {
-   "fixboxes":[
+   "collectors":[
       {
          "x": 81,
-         "y": 165
+         "y": 165,
+         "key": "fix-box"
       },
       {
          "x": 1046,
-         "y": 380
+         "y": 380,
+         "key": "fix-box"
       },
       {
          "x": 732,
-         "y": 110
+         "y": 110,
+         "key": "fix-box"
+      },
+      {
+         "x": 782,
+         "y": 620,
+         "key": "power"
+      },
+      {
+         "x": 10,
+         "y": 343,
+         "key": "power"
       }
    ],
    "enemies":[

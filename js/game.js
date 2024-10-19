@@ -46,8 +46,14 @@ export class Game extends Phaser.Scene{
             return true;
         });
 
-        this.physics.add.overlap(this.player.get(), this.plataform.getEnergyBalls,(player, energyBall) => {
-            
+        this.physics.add.overlap(this.player.get(), this.plataform.getEnergyBalls(),(player, energyBall) => {
+            this.player.playerSlowDown();
+            energyBall.destroy();
+        },null);
+
+        this.physics.add.overlap(this.player.get(), this.collecters.getPowerCollectors(),(player, power) => {
+            this.player.playerSpeedBoost();
+            power.destroy();
         },null);
     } 
 
