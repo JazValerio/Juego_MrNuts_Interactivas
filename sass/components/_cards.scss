@@ -9,6 +9,16 @@
     padding: 2rem;
 }
 
+.card-controls{
+    position: relative;
+
+    border-radius: 3rem;
+    display: grid;
+    max-width: fit-content;
+    padding: 2rem;
+    background: $clr-black-coffe;
+}
+
 .columnscard-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); // Fila con 3 columnas

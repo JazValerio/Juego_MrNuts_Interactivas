@@ -1,14 +1,15 @@
 export class Player {
 
-    constructor(scene) {
+    constructor(scene,joystick) {
         this.Scene = scene;
+        this.joystick = joystick;
     }
 
     playerJump = -560;
 
 
     create() {
-        this.player = this.Scene.physics.add.sprite(22, 400, 'MrNuts');
+        this.player = this.Scene.physics.add.sprite(100, 400, 'MrNuts');
         this.player.setOrigin(0, 0);
         this.player.setScale(0.7);
         this.player.setData('velx', 240);
@@ -17,10 +18,12 @@ export class Player {
         this.player.setBounce(0.2);
         this.player.setSize(50, 50);
         this.player.setOffset(35, 109);
-        //this.Scene.cameras.main.startFollow(this.player);
-
-        //this.Scene.cameras.main.setZoom(1.5);  
-        //this.Scene.cameras.main.setBounds(0, 0, this.Scene.game.config.width * this.Scene.cameras.main.zoom, this.Scene.game.config.height * this.Scene.cameras.main.zoom);
+        /*
+        this.Scene.cameras.main.startFollow(this.player);
+        this.Scene.cameras.main.setZoom(1.5);  
+        this.Scene.cameras.main.setBounds(0, 0, this.Scene.game.config.width * this.Scene.cameras.main.zoom, this.Scene.game.config.height * this.Scene.cameras.main.zoom);
+        
+        */
 
         //this.player.setCollideWorldBounds(true);
 
@@ -47,6 +50,7 @@ export class Player {
         });
 
         this.controles = this.Scene.input.keyboard.createCursorKeys();
+        this.joystickCursosrs=this.joystick.createCursorKeys();
 
         this.isTouching = false;
         this.Scene.input.on('pointerdown', (pointer) => {//esto es para que se detecte cuando se toca pantalla (celular)
@@ -72,11 +76,11 @@ export class Player {
     update() {
         this.onGround = this.player.body.onFloor();
 
-        if (this.controles.right.isDown) {
+        if (this.controles.right.isDown || this.joystickCursosrs.right.isDown) {
             this.player.setVelocityX(this.player.getData('velx'));
             this.player.anims.play('right', true);
             this.player.flipX = false;
-        } else if (this.controles.left.isDown) {
+        } else if (this.controles.left.isDown || this.joystickCursosrs.left.isDown) {
             this.player.setVelocityX(-this.player.getData('velx'));
             this.player.anims.play('right', true);
             this.player.flipX = true;
@@ -85,10 +89,9 @@ export class Player {
             this.player.anims.play('turn', true);
         }
 
-        if ((this.controles.up.isDown || this.controles.space.isDown) && this.onGround) {
+        if ((this.controles.up.isDown || this.controles.space.isDown || this.joystickCursosrs.up.isDown) && this.onGround) {
             this.player.body.setVelocityY(this.playerJump);
         }
-
         /*
         else if (this.Scene.input.pointer1.isDown) {
             this.handleTouch(this.Scene.input.pointer1);

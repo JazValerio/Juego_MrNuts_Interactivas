@@ -68,13 +68,13 @@
       {
          "x": 0,
          "y": 600,
-         "tiles": 1,
+         "tiles": 3,
          "key": "tile"
       },
       {
          "x": 468,
          "y": 443,
-         "tiles": 2,
+         "tiles": 3,
          "key": "tile"
       },
       {
