@@ -24,20 +24,22 @@ export class Game extends Phaser.Scene {
         const levelData = this.cache.json.get('levelData');
         this.add.image(0, 0, 'background').setOrigin(0, 0).setScale(1);
         this.plataform = new Platform(this, levelData);
-        this.enemy = new Enemy(this, levelData);
+        
         this.collecters = new Collecters(this, levelData);
-        this.plataform.create();
-        this.enemy.create();
+        this.plataform.create();    
         this.collecters.create();
         //se crea el joystick y se envía al player
         this.create_joystick();
         this.player = new Player(this, this.joystick);
+        this.enemy = new Enemy(this, levelData, this.player);
+        this.enemy.create();
         this.player.create();
         this.create_colliders();
     }
 
     update() {
         this.player.update();
+        this.enemy.update();
         this.input.on('pointerdown', function (pointer) {
             console.log("🦐" + pointer.x, pointer.y);
         });
