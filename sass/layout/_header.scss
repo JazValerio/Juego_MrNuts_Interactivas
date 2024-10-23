@@ -19,3 +19,21 @@
     width: 7rem;
     height: 7rem;
 }
+
+@media screen and (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+      height: 50% ;
+      border-bottom: none; 
+    }
+  
+    .logo-header {
+      margin-bottom: 2rem; 
+      width: 5rem;  
+      height: 5rem;
+    }
+  
+  }

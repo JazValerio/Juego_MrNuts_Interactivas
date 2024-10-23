@@ -21,13 +21,6 @@ export class Player {
         this.Scene.cameras.main.startFollow(this.player);
         this.Scene.cameras.main.setZoom(1.3);  
         this.Scene.cameras.main.setBounds(0, 0, this.Scene.game.config.width * this.Scene.cameras.main.zoom, this.Scene.game.config.height * this.Scene.cameras.main.zoom);
-        /*
-        this.Scene.cameras.main.startFollow(this.player);
-        this.Scene.cameras.main.setZoom(1.5);  
-        this.Scene.cameras.main.setBounds(0, 0, this.Scene.game.config.width * this.Scene.cameras.main.zoom, this.Scene.game.config.height * this.Scene.cameras.main.zoom);
-        
-        */
-        //this.player.setCollideWorldBounds(true);
 
         this.Scene.anims.create({
             key: 'right',

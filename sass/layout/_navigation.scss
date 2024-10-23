@@ -13,7 +13,9 @@
     gap: .5rem;
     border-radius: .5rem;
     padding: .25rem .5rem;
-    color: $clr-black
+    color: $clr-black;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-list-item:hover{
@@ -21,3 +23,17 @@
     color: $clr-white
 }
 
+@media screen and (max-width: 768px) {
+    .top-nav {
+        margin: 0 auto;
+        width: 70%;
+        align-items: center;
+        gap: 1rem; 
+      }
+    
+      .nav-list-item {
+        padding: .25rem 1rem; 
+        width: 100%; 
+        text-align: center; 
+      }
+  }

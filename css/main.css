@@ -89,7 +89,7 @@ h1 {
 }
 
 .cards-title {
-  padding: 0rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.5rem;
   color: rgb(24, 23, 39);
   border-bottom: 0.05rem;
@@ -175,6 +175,12 @@ h1 {
   padding: 3rem 7rem;
 }
 
+@media screen and (max-width: 768px) {
+  .columnscard-container {
+    grid-template-columns: 1fr;
+    padding: 1rem 2rem;
+  }
+}
 .logo:hover {
   transform: scale(1.1);
   transition: all 0.2s ease-in-out;
@@ -196,6 +202,21 @@ h1 {
   height: 7rem;
 }
 
+@media screen and (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    height: 50%;
+    border-bottom: none;
+  }
+  .logo-header {
+    margin-bottom: 2rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .top-nav {
   display: flex;
   gap: 1rem;
@@ -211,6 +232,8 @@ h1 {
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
   color: rgb(30, 30, 30);
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-list-item:hover {
@@ -218,6 +241,19 @@ h1 {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .top-nav {
+    margin: 0 auto;
+    width: 70%;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-list-item {
+    padding: 0.25rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
 .columns-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -233,6 +269,7 @@ h1 {
 
 .art-container {
   display: flex;
+  flex-direction: row;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -263,6 +300,11 @@ h1 {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .black-box {
+    width: 85%;
+  }
+}
 .ranking-list {
   list-style: none;
   padding: 0;

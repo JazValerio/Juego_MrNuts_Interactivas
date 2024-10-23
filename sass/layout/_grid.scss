@@ -6,6 +6,8 @@
     gap: 1.5rem;
 }
 
+
+
 .levels-cards {
     width: 80%;
     margin: 0 auto;
@@ -14,8 +16,8 @@
 }
 
 .art-container {
-
     display: flex;
+    flex-direction: row;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -44,6 +46,13 @@
     width: 60%;
     text-align: center;
     color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .black-box {
+        width: 85%;
+    }
+    
 }
 
 .ranking-list {

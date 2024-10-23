@@ -21,9 +21,15 @@
 
 .columnscard-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     padding: 3rem 7rem;
+}
 
+@media screen and (max-width: 768px) {
+    .columnscard-container {
+        grid-template-columns: 1fr; 
+        padding: 1rem 2rem; 
+    }
 }
 
